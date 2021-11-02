@@ -13,8 +13,7 @@ class CalculadoraTk:
 
     def __init__(self):
         self.jan = tk.Tk()
-        self.jan.geometry(str(self.calc.getLargura())+"x"+
-                          str(self.calc.getAltura()))
+        self.jan.geometry(str(self.calc.getLargura())+"x"+str(self.calc.getAltura()))
         self.jan.resizable(False,False)
         self.jan.config(bg='#202020')
         self.jan.title("Calculadora Efraim")
@@ -38,9 +37,7 @@ class CalculadoraTk:
         for linha in range(len(self.calc.getBotoes())):
             for coluna in range(len(self.calc.getBotoes()[linha])):
                 texto = self.calc.getBotoes()[linha][coluna]
-                btn = tk.Button(self.f2,text=texto,
-                                font=("Helvetica",12),
-                                width=5,height=2,padx=5,pady=5,bd=4)
+                btn = tk.Button(self.f2,text=texto,font=("Helvetica",12),width=5,height=2,padx=5,pady=5,bd=4)
                 btn.config(background='#505050')
                 btn.grid(row=linha, column=coluna,pady=(3,3),padx=(3,3))
                 
